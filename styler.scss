@@ -1,7 +1,16 @@
-$green: #91F35C;
-$blue: #5EDCF3;
-$purple: #BF5EF3;
-$orange: #F3745E;
+$purple: #C72E85;
+$green: #2FC670;
+$orange: #C6702F;
+$blue: rgb(47, 133, 198);
+
+
+$jiffy_r:rgb(227, 24, 54);
+$jiffy_b:#1B3E94;
+$jiffy_g:#00A160;
+$jiffy_y: #E4CB01;
+
+$jif_font: 'Abril Fatface', cursive;
+
 $title_font: Brussels;
 
 @font-face {
@@ -39,11 +48,11 @@ $title_font: Brussels;
         .nav-link {
             font-size: 28px;
             font-weight:600;
-            font-family: $title_font;
-            letter-spacing: 0.05em;
+            font-family: $jif_font;
+            letter-spacing: 0.1em;
             display: inline-block;
             text-decoration: none;
-            color: $green;
+            color: white;
             height: 100%;
             display: flex;
             padding-left: 10px;
@@ -51,6 +60,88 @@ $title_font: Brussels;
             // border: 4px solid black;
 
             align-items: center;
+        }
+
+        #about:hover {
+            background-color: $jiffy_r;
+            border: 2px solid black;
+        }
+        #work:hover {
+            background-color: $jiffy_r;
+            border: 2px solid black;
+        }
+        #contact:hover {
+            background-color: $jiffy_r;
+            border: 2px solid black;
+        }
+    }
+}
+
+#jif-name {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+
+    .jif-box {
+        width: 33.33%;
+        font-family: $jif_font;
+        font-size:13em;
+        color: white;
+        text-shadow: -15px 5px black;
+
+    }
+
+    #red {
+        background-color: $jiffy_r;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+        h1 {
+            margin-right: -0.5ch;
+        }
+    }
+    #blue {
+        background-color: $jiffy_b;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        z-index:-1;
+    }
+    #green {
+        background-color: $jiffy_g;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        h1 {
+            margin-left: -0.25ch;
+        }
+    }
+
+    #name-box {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        z-index: -1;
+        top: 70%;
+        z-index: 1;
+        h1 {
+            background-color: rgb(205, 24, 54);
+            color: $jiffy_y;
+            font-family: $jif_font;
+            letter-spacing: 0.1em;
+            padding: 10px 20px;
+            border: 4px solid goldenrod;
+            outline: 4px solid rgb(205, 24, 54);
+            width: 800px;
+            font-size: 2em;
+            text-align: center;
+            
         }
     }
 }
