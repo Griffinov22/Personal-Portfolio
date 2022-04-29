@@ -1,3 +1,56 @@
-body {
-    background-color:red;
+$green: #91F35C;
+$blue: #5EDCF3;
+$purple: #BF5EF3;
+$orange: #F3745E;
+$title_font: Brussels;
+
+@font-face {
+    font-family: Brussels;
+    src: url(/brussels-city-font/BrusselsCityPersonalUsed-L3Lon.otf)
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#navbar {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 75px;
+    background-color: $blue;
+
+    ul {
+        margin-left: 5%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3%;
+    }
+    li {
+        display: inline;
+        height: 100%;
+
+        .nav-link {
+            font-size: 28px;
+            font-weight:600;
+            font-family: $title_font;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            text-decoration: none;
+            color: $green;
+            height: 100%;
+            display: flex;
+            padding-left: 10px;
+            padding-right: 10px;
+            // border: 4px solid black;
+
+            align-items: center;
+        }
+    }
 }
