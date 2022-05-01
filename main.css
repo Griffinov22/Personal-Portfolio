@@ -5,7 +5,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 #navbar {
@@ -14,6 +13,7 @@
   width: 100%;
   height: 75px;
   background-color: rgb(47, 133, 198);
+  z-index: 5;
 }
 #navbar ul {
   margin-left: 5%;
@@ -65,7 +65,7 @@
   font-family: "Abril Fatface", cursive;
   font-size: 13em;
   color: white;
-  text-shadow: -15px 5px black;
+  text-shadow: -15px 12px black;
 }
 #jif-name #red {
   background-color: rgb(227, 24, 54);
@@ -75,6 +75,7 @@
   align-content: center;
 }
 #jif-name #red h1 {
+  z-index: 1;
   margin-right: -0.5ch;
 }
 #jif-name #blue {
@@ -83,7 +84,6 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  z-index: -1;
 }
 #jif-name #green {
   background-color: #00A160;
@@ -101,9 +101,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  z-index: -1;
   top: 70%;
-  z-index: 1;
 }
 #jif-name #name-box h1 {
   background-color: rgb(205, 24, 54);
@@ -116,6 +114,55 @@
   width: 800px;
   font-size: 2em;
   text-align: center;
+}
+
+#accomplishments {
+  height: 800px;
+  background: #C72E85;
+  color: white;
+}
+#accomplishments #accomplish-h1 {
+  width: 60%;
+  margin: auto;
+  font-size: 2.2em;
+  text-align: center;
+  position: relative;
+  top: 10%;
+  line-height: 1.5em;
+  font-family: Brussels;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+}
+#accomplishments #accomplish-flexbox {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#accomplishments #accomplish-flexbox .flexbox {
+  width: 300px;
+  border-radius: 15px;
+}
+#accomplishments #accomplish-flexbox .flexbox img {
+  width: 300px;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#accomplishments #accomplish-flexbox .flexbox figcaption {
+  text-align: center;
+  background-color: #2FC670;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 900;
+  color: #E4CB01;
+  letter-spacing: 0.08em;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#accomplishments #accomplish-flexbox .flexbox a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

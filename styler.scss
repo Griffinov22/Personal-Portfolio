@@ -1,6 +1,6 @@
 $purple: #C72E85;
 $green: #2FC670;
-$orange: #C6702F;
+$orange: #ffd900;
 $blue: rgb(47, 133, 198);
 
 
@@ -22,7 +22,6 @@ $title_font: Brussels;
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 
@@ -32,6 +31,7 @@ $title_font: Brussels;
     width: 100%;
     height: 75px;
     background-color: $blue;
+    z-index: 5;
 
     ul {
         margin-left: 5%;
@@ -88,7 +88,7 @@ $title_font: Brussels;
         font-family: $jif_font;
         font-size:13em;
         color: white;
-        text-shadow: -15px 5px black;
+        text-shadow: -15px 12px black;
 
     }
 
@@ -99,6 +99,7 @@ $title_font: Brussels;
         justify-content: flex-end;
         align-content: center;
         h1 {
+            z-index: 1;
             margin-right: -0.5ch;
         }
     }
@@ -108,7 +109,6 @@ $title_font: Brussels;
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        z-index:-1;
     }
     #green {
         background-color: $jiffy_g;
@@ -127,9 +127,7 @@ $title_font: Brussels;
         flex-direction: row;
         justify-content: center;
         width: 100%;
-        z-index: -1;
         top: 70%;
-        z-index: 1;
         h1 {
             background-color: rgb(205, 24, 54);
             color: $jiffy_y;
@@ -142,6 +140,61 @@ $title_font: Brussels;
             font-size: 2em;
             text-align: center;
             
+        }
+    }
+}
+
+#accomplishments {
+    height: 800px;
+    background: $purple;
+    color: white;
+
+    #accomplish-h1 {
+        width: 60%;
+        margin:auto;
+        font-size: 2.2em;
+        text-align: center;
+        position: relative;
+        top: 10%;
+        line-height: 1.5em;
+        font-family: $title_font;
+        letter-spacing: 0.05em;
+        text-decoration: underline;
+    }
+
+    #accomplish-flexbox {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .flexbox {
+            width: 300px;
+            border-radius: 15px;
+
+            img {
+                width: 300px;
+                display: block;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            figcaption {
+                text-align: center;
+                background-color: $green;
+                padding: 10px;
+                font-size: 1.2em;
+                font-family: $jif_font;
+                font-weight: 900;
+                color: $jiffy_y;
+                letter-spacing: 0.08em;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 }
