@@ -7,7 +7,7 @@ $blue: rgb(47, 133, 198);
 $jiffy_r:rgb(227, 24, 54);
 $jiffy_b:#1B3E94;
 $jiffy_g:#00A160;
-$jiffy_y: #E4CB01;
+$jiffy_y: rgb(228, 203, 1);
 
 $jif_font: 'Abril Fatface', cursive;
 
@@ -57,6 +57,7 @@ $title_font: Brussels;
             display: flex;
             padding-left: 10px;
             padding-right: 10px;
+            box-sizing: border-box;
             // border: 4px solid black;
 
             align-items: center;
@@ -77,11 +78,12 @@ $title_font: Brussels;
     }
 }
 
-#jif-name {
+#welcome-section {
     margin-top: 75px;
     display: flex;
     flex-direction: row;
-    height: 700px;
+    height: 757px;
+    min-width: 860px;
 
     .jif-box {
         width: 33.33%;
@@ -144,18 +146,19 @@ $title_font: Brussels;
     }
 }
 
-#accomplishments {
-    height: 800px;
+#projects {
+
     background: $purple;
     color: white;
 
     #accomplish-h1 {
         width: 60%;
+        padding-top: 75px;
         margin:auto;
+        position: relative;
+        top: 40px;
         font-size: 2.2em;
         text-align: center;
-        position: relative;
-        top: 10%;
         line-height: 1.5em;
         font-family: $title_font;
         letter-spacing: 0.05em;
@@ -163,17 +166,27 @@ $title_font: Brussels;
     }
 
     #accomplish-flexbox {
-        margin-top: 10%;
+        margin-top: 5%;
+        padding-bottom: 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 605px;
 
-        .flexbox {
+
+        .project-tile {
             width: 300px;
             border-radius: 15px;
+            margin-bottom: 2%;
 
             img {
                 width: 300px;
+                height: 250px;
                 display: block;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
@@ -190,11 +203,95 @@ $title_font: Brussels;
                 letter-spacing: 0.08em;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
+                border-top:4px solid black;
+                height: 50px;
             }
 
             a {
                 text-decoration: none;
             }
         }
+    }
+}
+
+#colab {
+    background-color: #E4CB01;
+    
+    h1 {
+        width: 60%;
+        padding-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 72px;
+        font-family:$title_font;
+        color: $jiffy_g;
+        font-weight: 900;
+        text-shadow: -3px 3px 2px $purple, -4px 4px 2px white;
+    }
+
+    ul {
+        width: 90%;
+        margin:auto;
+        margin-top: 8%;
+        text-align: center;
+
+
+        li {
+            display: inline-block;
+            font-size: 42px;
+            font-variant: small-caps;
+            font-family: $jif_font;
+            font-weight: 800;
+            padding: 15px;
+            letter-spacing: 0.05em;
+
+            img {
+                width: 44px;
+                height: 44px;
+                vertical-align: middle;
+            }
+
+            #indeed {
+                background-color: white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: 2px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $jiffy_b;
+                padding: 10px;
+            }
+        }
+        a:hover {
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+
+    footer {
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 180px;
+        text-align: right;
+        width: 70%;
+        color: $purple;
+
+    }
+}
+
+@media (max-width: 850px) {
+    #colab {
+        h1 {
+            padding-top: 75px;
+        }
+        ul {
+        li {
+            display: block;
+        }
+    }
     }
 }
